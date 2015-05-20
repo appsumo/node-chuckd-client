@@ -1,4 +1,4 @@
-var cdc = require('../lib/statsd-client'),
+var cdc = require('../lib/chuckd-client'),
     CDC = new cdc({host: '127.0.0.1', tcp: true, debug: true});
 
 var siteId = 'siteId';
