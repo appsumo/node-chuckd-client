@@ -1,21 +1,10 @@
-var sdc = require('../lib/statsd-client'),
-    SDC = new sdc({host: '10.111.12.113', debug: 1, prefix: "statsd-client"}),
-    SDCTest = SDC.getChildClient('test');
+var cdc = require('../lib/statsd-client'),
+    CDC = new cdc({host: '127.0.0.1', tcp: true, debug: true});
 
+var siteId = 'siteId';
+var pathHash = 'pathHash';
+var campaignId = 'campaignId';
 
-var begin = new Date();
-setTimeout(function () {
-    // Set 'statsd-client.test.gauge'
-    SDCTest.gauge('gauge', 100 * Math.random());
-
-    // Icrement 'statsd-client.test.counter' twice
-    SDCTest.increment('counter');
-    SDC.increment('test.counter');
-
-    // Set some time
-    SDC.timing('speed', begin);
-
-    // Close socket
-    SDC.close();
-}, 100 * Math.random());
-
+CDC.put('a25489e9-848c-4356-97ff-161b0852c509', siteId, pathHash + ':' + campaignId, 'Percent 50', 5);
+CDC.increment('a25489e9-848c-4356-97ff-161b0852c509', siteId, pathHash + ':' + campaignId, 'Percent 50', 1);
+CDC.decrement('a25489e9-848c-4356-97ff-161b0852c509', siteId, pathHash + ':' + campaignId, 'Percent 50', 2);
