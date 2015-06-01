@@ -1,6 +1,6 @@
 {
   "author": "Morten Siebuhr <sbhr@sbhr.dk>",
-  "name": "statsd-client",
+  "name": "chuckd-client",
   "description": "Yet another client for Etsy's statsd",
   "keywords": [
     "statsd",
@@ -10,11 +10,11 @@
     "tcp"
   ],
   "version": "0.1.0",
-  "homepage": "https://github.com/msiebuhr/node-statsd-client",
-  "bugs": "https://github.com/msiebuhr/node-statsd-client/issues",
+  "homepage": "https://github.com/appsumo/node-chuckd-client",
+  "bugs": "https://github.com/appsumo/node-chuckd-client/issues",
   "repository": {
     "type": "git",
-    "url": "git://github.com/msiebuhr/node-statsd-client.git"
+    "url": "git://github.com/appsumo/node-chuckd-client.git"
   },
   "main": "lib/chuckd-client.js",
   "dependencies": {},
